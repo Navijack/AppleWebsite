@@ -1,24 +1,11 @@
 import { useGSAP } from '@gsap/react';
 import React, { useRef } from 'react';
 import { animateWithGsap } from '../utils/animations';
-import { explore1Img, explore2Img, } from '../utils';
+import { explore1Img, explore2Img, explore3Img } from '../utils';
 import gsap from 'gsap';
 
 const Features = () => {
   const videoRef = useRef();
-
-  useGSAP(() => {
-    gsap.to('#exploreVideo', {
-      scrollTrigger: {
-        trigger: '#exploreVideo',
-        toggleAttribute: 'play pause reverse restart',
-        start: '-10% bottom'
-      },
-      onComplete: () => {
-        videoRef.current.play();
-      }
-    })
-  })
 
   useGSAP(() => {
     animateWithGsap('#features_title', { y: 0, opacity: 1 })
@@ -43,7 +30,7 @@ const Features = () => {
           </div>
           <div className="flex-center flex-col sm:px-10">
             <div className="overflow-hidden flex-1 h-[50vh]">
-              <img src={explore1Img} alt="titanium" className="feature-video g_grow" />
+              <img src={explore3Img} alt="titanium" className="feature-video g_grow" />
             </div>
             <div className="flex flex-col w-full relative">
               <div className="feature-video-container">
