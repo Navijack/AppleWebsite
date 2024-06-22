@@ -15,7 +15,7 @@ const Features = () => {
         start: '-10% bottom'
       },
       onComplete: () => {
-        video.play();
+        videoRef.current.play();
       }
     })
   })
@@ -43,7 +43,7 @@ const Features = () => {
           </div>
           <div className="flex-center flex-col sm:px-10">
             <div className="relative h-[50vh] w-full flex items-center">
-              <video playsInline id='explorevideo' className='w-full h-full object-cover object-center'
+              <video playsInline id='exploreVideo' className='w-full h-full object-cover object-center'
                 preload='none' muted autoPlay ref={videoRef}>
                 <source src={exploreVideo} type='video/mp4' />
               </video>
@@ -68,7 +68,7 @@ const Features = () => {
                   </p>
                 </div>
                 <div className="flex-1 flex-center">
-                  <p className="text-gray-200 font">
+                  <p className="text-gray-200 font-semibold">
                     Titanium has one of the best strength-to-weight ratios of any metal, making these our {' '}
                     <span className="text-white">
                       lightest Pro models ever.
